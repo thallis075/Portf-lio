@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Thallis | Portfólio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- HERO -->
+  <section class="page-block page-block--light">
+    <div class="section section--no-bg">
+
+      <!-- LOGO -->
+      <div class="brand">
+        <span class="brand__name">Thallis</span>
+        <span class="brand__dot">.</span>
+        <span class="brand__portfolio">Portfólio</span>
+      </div>
+
+      <!-- NAVEGAÇÃO -->
+      <nav class="nav">
+        <a href="#sobre" class="nav__item">Sobre</a>
+        <a href="#portfolio" class="nav__item">Portfólio</a>
+        <a href="#contato" class="nav__item">Contato</a>
+      </nav>
+
+      <!-- HERO CONTENT -->
+      <header class="hero">
+        <div class="hero__content">
+
+          <div class="hero__left">
+            <h1 class="hero__title">Olá! Sou o Thallis</h1>
+            <p class="hero__subtitle">
+              Estudante de programação e desenvolvimento web pela Alpha
+            </p>
+          </div>
+
+          <div class="hero__photo">
+            <img src="images/Hero.png" alt="Foto de Thallis" />
+          </div>
+
+        </div>
+      </header>
+
+    </div>
+  </section>
+
+  <!-- SOBRE -->
+  <section id="sobre" class="page-block page-block--gray">
+    <div class="section section--centered">
+      <span class="section__tag">Sobre mim</span>
+      <h2 class="section__title">Quem sou eu</h2>
+
+      <p class="section__description">
+        Sou um estudante de programação dedicado, sempre em busca de aprender
+        novas tecnologias e criar soluções inovadoras no desenvolvimento web.
+      </p>
+
+      <div class="skill-list">
+        <article class="skill-card">
+          <img src="images/frontend.png" alt="Front-end" class="skill-card__image" />
+          <h3 class="skill-card__title">Front-end</h3>
+          <p class="skill-card__text">HTML, CSS e JavaScript</p>
+        </article>
+
+        <article class="skill-card">
+          <img src="images/design.png" alt="Design" class="skill-card__image" />
+          <h3 class="skill-card__title">Design</h3>
+          <p class="skill-card__text">UI/UX, Figma e Design Responsivo</p>
+        </article>
+
+        <article class="skill-card">
+          <img src="images/other.png" alt="Outros" class="skill-card__image" />
+          <h3 class="skill-card__title">Outros</h3>
+          <p class="skill-card__text">Git e GitHub</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- PORTFÓLIO -->
+  <section id="portfolio" class="page-block page-block--light">
+    <div class="section section--centered">
+      <span class="section__tag">Portfólio</span>
+      <h2 class="section__title">Meus Projetos</h2>
+      <p class="section__description">
+        Alguns trabalhos recentes
+      </p>
+
+      <div class="project-list">
+        <div class="project-item">
+          <div class="project-card">
+            <img src="images/image1.jpg" alt="Projeto 1" />
+          </div>
+          <p class="project-text">
+            Sites simples como receita<br />
+            ou cadastro de produtos
+          </p>
+        </div>
+
+        <div class="project-item">
+          <div class="project-card">
+            <img src="images/image2.jpg" alt="Projeto 2" />
+          </div>
+          <p class="project-text">
+            Uso de APIs como a do Google,<br />
+            Imagens, CEP e IBGE<br />
+            para previsão do tempo
+          </p>
+        </div>
+
+        <div class="project-item">
+          <div class="project-card">
+            <img src="images/image3.jpg" alt="Projeto 3" />
+          </div>
+          <p class="project-text">
+            Sites de pontos turísticos<br />
+            e viagens
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTATO -->
+<section id="contato" class="page-block page-block--gray">
+  <div class="section section--contact">
+    <span class="section__tag">Contato</span>
+    <h2 class="section__title">Vamos conversar?</h2>
+    <p class="section__description">
+      Entre em contato comigo por qualquer um dos meios abaixo
+    </p>
+
+    <div class="contact">
+      <div class="contact__info">
+        <p><strong>Email:</strong> lima.thallis@gmail.com</p>
+        <p><strong>Telefone:</strong> (32) 98851-8867</p>
+        <p><strong>Localização:</strong> Juiz de Fora, MG</p>
+      </div>
+
+      <form class="contact__form" id="contact-form">
+        <input type="text" name="name" placeholder="Nome" required />
+        <input type="email" name="email" placeholder="E-mail" required />
+        <textarea name="message" placeholder="Sua mensagem" required></textarea>
+        <button type="submit">Enviar mensagem</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <p class="footer__text">
+    © 2025 Thallis Lima. Todos os direitos reservados.
+  </p>
+  <p class="footer__subtext">
+    Desenvolvido com HTML, CSS e JavaScript
+  </p>
+</footer>
+
+
+  <!-- SCRIPTS -->
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+  <script src="script.js"></script>
+
+</body>
+</html>

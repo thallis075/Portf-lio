@@ -1,0 +1,32 @@
+# Portfólio de Thallis Lima
+
+Bem-vindo ao meu portfólio pessoal! Este site foi desenvolvido para apresentar minhas habilidades, projetos e formas de contato de maneira moderna e responsiva.
+
+---
+
+## 📝 Descrição
+
+Este projeto é um **portfólio pessoal** que apresenta:
+
+- **Seção Hero:** Introdução com nome, foto e uma breve descrição.
+- **Sobre mim:** Minhas habilidades em front-end, design e outras ferramentas.
+- **Portfólio:** Galeria de projetos recentes com imagens e descrições.
+- **Contato:** Formulário funcional para envio de mensagens por e-mail.
+- **Footer:** Rodapé fixo com informações de direitos autorais e tecnologias usadas.
+
+O site utiliza **HTML, CSS e JavaScript**, com interações simples como hover em cards e imagens, além de envio de formulário via EmailJS.
+
+---
+
+## 🎨 Tecnologias utilizadas
+
+- **HTML5**
+- **CSS3**
+- **JavaScript (Vanilla JS)**
+- **EmailJS** para envio de formulários
+- **Flexbox** para layout responsivo
+
+---
+
+## 📂 Estrutura do projeto
+

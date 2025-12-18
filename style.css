@@ -1,0 +1,394 @@
+/* =====================
+   VARIÁVEIS
+===================== */
+:root {
+  --color-white: #ffffff;
+  --color-gray: #f9fafb;
+  --color-primary: #8b5cf6;
+  --color-accent: #10b981;
+  --color-text: #111827;
+  --color-muted: #6b7280;
+
+  --radius-lg: 24px;
+  --radius-md: 16px;
+  --radius-sm: 8px;
+
+  --padding-section: 64px;
+}
+
+/* =====================
+   RESET
+===================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Inter, Arial, sans-serif;
+}
+
+html, body {
+  height: 100%;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: var(--color-text);
+  background: var(--color-white);
+  display: flex;
+  flex-direction: column;
+}
+
+/* =====================
+   BLOCOS DA PÁGINA
+===================== */
+.page-block {
+  flex: 1; /* faz os blocos ocuparem espaço restante */
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  padding: 64px 0;
+}
+
+.page-block--light {
+  background: var(--color-white);
+}
+
+.page-block--gray {
+  background: var(--color-gray);
+}
+
+/* =====================
+   SEÇÃO CENTRAL
+===================== */
+.section {
+  position: relative;
+  width: calc(1440px - 128px);
+  min-height: 100%;
+  padding: var(--padding-section);
+  background: rgba(16, 185, 129, 0.05);
+  border-radius: var(--radius-lg);
+  text-align: center;
+}
+
+.section--no-bg {
+  background: transparent;
+}
+
+.section--centered {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.section--contact {
+  padding-top: 72px;
+  padding-bottom: 128px;
+  text-align: center;
+}
+
+/* =====================
+   TEXTOS DE SEÇÃO
+===================== */
+.section__tag {
+  font-size: 14px;
+  color: var(--color-accent);
+}
+
+.section__title {
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.section__description {
+  font-size: 16px;
+  max-width: 520px;
+  margin: 0 auto 56px;
+  line-height: 1.6;
+}
+
+/* =====================
+   HERO
+===================== */
+.hero {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero__content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 80px;
+  width: 100%;
+  max-width: 1000px;
+}
+
+.hero__left {
+  max-width: 520px;
+  text-align: left;
+}
+
+.hero__title {
+  font-size: 52px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.hero__subtitle {
+  font-size: 18px;
+  color: var(--color-muted);
+  max-width: 520px;
+  margin-bottom: 40px;
+}
+
+.hero__photo {
+  width: 260px;
+  height: 340px;
+  flex-shrink: 0;
+}
+
+.hero__photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: var(--radius-lg);
+  display: block;
+}
+
+/* =====================
+   SKILLS
+===================== */
+.skill-list {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  margin-top: 16px;
+}
+
+.skill-card {
+  width: 240px;
+  min-height: 260px;
+  padding: 32px 24px;
+  background: var(--color-white);
+  border-radius: var(--radius-md);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+  text-align: center;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    background-color 0.3s ease;
+}
+
+.skill-card__image {
+  width: 72px;
+  height: 72px;
+  margin-bottom: 20px;
+  object-fit: contain;
+}
+
+.skill-card__title {
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.skill-card__text {
+  font-size: 14px;
+  color: var(--color-muted);
+}
+
+.skill-card--active {
+  transform: translateY(-12px);
+  background-color: var(--color-primary);
+  box-shadow: 0 20px 40px rgba(139, 92, 246, 0.35);
+}
+
+.skill-card--active .skill-card__title,
+.skill-card--active .skill-card__text {
+  color: var(--color-white);
+}
+
+.skill-card--active .skill-card__image {
+  filter: brightness(0) invert(1);
+}
+
+/* =====================
+   PROJETOS
+===================== */
+.project-list {
+  display: flex;
+  justify-content: center;
+  gap: 48px;
+  margin-top: 32px;
+}
+
+.project-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s ease;
+}
+
+.project-item:hover {
+  transform: translateY(-8px);
+}
+
+.project-card {
+  width: 320px;
+  height: 180px;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  background: #000;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.06);
+}
+
+.project-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: transform 0.4s ease;
+}
+
+.project-item:hover .project-card img {
+  transform: scale(1.12);
+}
+
+.project-text {
+  margin-top: 16px;
+  font-size: 14px;
+  color: var(--color-muted);
+  text-align: center;
+  line-height: 1.6;
+  max-width: 320px;
+}
+
+/* =====================
+   CONTATO
+===================== */
+.section--contact .section__title {
+  font-size: 28px;
+}
+
+.section--contact .section__description {
+  font-size: 15px;
+  margin-bottom: 48px;
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 48px;
+}
+
+.contact__info {
+  max-width: 520px;
+}
+
+.contact__info p {
+  font-size: 15px;
+  line-height: 1.8;
+  margin-bottom: 8px;
+}
+
+.contact__form {
+  width: 100%;
+  max-width: 360px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.contact__form input,
+.contact__form textarea {
+  padding: 12px;
+  font-size: 14px;
+  border-radius: var(--radius-sm);
+  border: 1px solid #e5e7eb;
+}
+
+.contact__form textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.contact__form button {
+  padding: 12px;
+  margin-top: 8px;
+  background: var(--color-primary);
+  color: var(--color-white);
+  border: none;
+  border-radius: var(--radius-sm);
+  font-weight: 500;
+  cursor: pointer;
+}
+
+/* =====================
+   BRAND (LOGO)
+===================== */
+.brand {
+  position: absolute;
+  top: 32px;
+  left: 64px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.brand__name {
+  color: var(--color-text);
+}
+
+.brand__dot {
+  color: var(--color-accent);
+}
+
+.brand__portfolio {
+  color: var(--color-primary);
+}
+
+/* =====================
+   NAVEGAÇÃO
+===================== */
+.nav {
+  position: absolute;
+  top: 32px;
+  right: 64px;
+  display: flex;
+  gap: 32px;
+}
+
+.nav__item {
+  font-size: 16px;
+  color: var(--color-text);
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.nav__item:hover {
+  text-decoration: underline;
+}
+
+/* =====================
+   FOOTER
+===================== */
+.footer {
+  background: #000;
+  color: #fff;
+  padding: 32px 16px;
+  text-align: center;
+}
+
+.footer__text {
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.footer__subtext {
+  font-size: 13px;
+  color: #9ca3af;
+}
